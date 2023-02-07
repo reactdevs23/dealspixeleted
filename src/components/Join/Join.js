@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { GoogleLogin } from "react-google-login";
+
 import { Link } from "react-router-dom";
 import CheckBox from "../Checkbox/CheckBox";
 
