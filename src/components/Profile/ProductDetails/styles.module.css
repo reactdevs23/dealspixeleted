@@ -1,0 +1,36 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 25px 20px;
+}
+.shareAndDraftContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 35px 0;
+}
+.shared {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #ffffff;
+  background: #191919;
+  border-radius: 48px;
+  padding: 6px 14px;
+}
+.draft {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 108%;
+
+  color: #191919;
+}
+@media only screen and (max-width: 520px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}

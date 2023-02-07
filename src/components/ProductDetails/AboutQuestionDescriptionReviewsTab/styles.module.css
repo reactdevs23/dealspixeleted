@@ -1,0 +1,40 @@
+.wrapper {
+  background: #e8e8e8;
+  padding: 50px 0;
+}
+.allTabs {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
+  grid-template-columns: repeat(4, 188px);
+  gap: 18px;
+}
+.tab {
+  background: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 15px 12px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tabText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  color: #191919;
+  text-align: center;
+}
+.activeTab {
+  background: #e0001a;
+}
+.activeTab .tabText {
+  color: #fff;
+}
+@media only screen and (max-width: 991px) {
+  .allTabs {
+    grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
+  }
+}

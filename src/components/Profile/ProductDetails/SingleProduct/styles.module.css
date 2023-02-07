@@ -1,0 +1,164 @@
+.productItem {
+  padding: 12px 18px;
+  background: #ffffff;
+
+  box-shadow: 0px -3px 28px rgba(234, 234, 234, 0.12);
+  border-radius: 8px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.likeIconContainer {
+  width: 24px;
+  height: 24px;
+  background: #4a6ea9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.likeIcon {
+  font-size: 15px;
+  color: #fff;
+}
+.nameAndtime {
+  display: flex;
+  flex-direction: column;
+}
+.numberOfLike {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 117%px;
+  color: var(--black);
+  opacity: 0.7;
+}
+.time {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  color: var(--black);
+}
+.discount {
+  margin-right: -28px;
+}
+
+.product {
+  width: 100%;
+  display: block;
+  padding: 12px 0;
+}
+.via {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+
+  letter-spacing: -0.005em;
+  color: rgba(25, 25, 25, 0.4);
+}
+.companyName {
+  color: #41b617;
+}
+.title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 122%;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  padding-top: 12px;
+}
+.description {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: -0.005em;
+  color: var(--black);
+  opacity: 0.6;
+  padding: 12px 0;
+}
+.priceContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  padding-bottom: 12px;
+}
+.price {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 64%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.005em;
+  color: var(--red);
+}
+.previousPrice {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 79%;
+  letter-spacing: -0.005em;
+  text-decoration-line: line-through;
+  color: var(--black);
+  opacity: 0.5;
+}
+.likeCommentShare {
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.like,
+.comment,
+.share {
+  width: 17px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.likeNumber {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+  color: var(--black);
+
+  opacity: 0.4;
+}
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 0;
+}
+.type {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 80%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 49px;
+  padding: 0 12px;
+}

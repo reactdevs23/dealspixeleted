@@ -1,0 +1,149 @@
+.profileInfoContainer {
+  padding: 20px;
+
+  background: #fff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: -180px;
+}
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dealHunter {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 136%;
+  color: #00a3ff;
+  background: rgba(0, 163, 255, 0.12);
+
+  border-radius: 15px;
+  width: 70px;
+  padding: 3px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+.name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+
+  color: #191919;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 164%;
+
+  color: rgba(25, 25, 25, 0.72);
+}
+.about {
+  text-align: center;
+}
+.box {
+  padding: 15px;
+  border-radius: 4px;
+
+  border: 1px solid rgb(232, 232, 232, 0.8);
+  border-radius: 4px;
+  margin: 15px 0;
+}
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(232, 232, 232, 0.8);
+  padding-bottom: 15px;
+}
+.title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 108%;
+
+  color: #191919;
+}
+.arrow {
+  font-size: 20px;
+  color: #191919;
+}
+.achivement {
+  padding: 15px 0;
+}
+.iconTextAndNumber {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+.iconAndText {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 12px;
+  height: 14px;
+}
+.iconTitleText {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+.badgeTitle {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 169%;
+  letter-spacing: -0.01em;
+  color: rgb(25, 25, 25, 0.9);
+}
+.badgeText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: 0.0028em;
+  color: rgb(25, 25, 25, 0.4);
+}
+@media only screen and (max-width: 1199px) {
+  .profileInfoContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    margin-top: -100px;
+  }
+  .statsBadge {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .profileInfoContainer {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .statsBadge {
+    grid-template-columns: 1fr;
+  }
+  .profileInfoContainer {
+    margin-top: 20px;
+  }
+}

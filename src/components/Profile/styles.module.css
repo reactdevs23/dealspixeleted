@@ -1,0 +1,25 @@
+.profileContainer {
+  background: #e8e8e8;
+  padding-bottom: 130px;
+}
+.image {
+  width: 100%;
+  min-height: 233.95px;
+  display: block;
+}
+.profile {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 25px;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 1199px) {
+  .profile {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .image {
+    display: none;
+  }
+}

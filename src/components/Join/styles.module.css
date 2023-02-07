@@ -1,0 +1,144 @@
+.wrapper {
+  max-width: 482px;
+
+  margin: 0 auto;
+  background: #e8e8e8;
+  padding: 30px;
+  padding-bottom: 50px;
+  border-radius: 8px;
+}
+.title {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 150%;
+  text-align: center;
+  color: #191919;
+}
+.heading {
+  text-align: left;
+}
+.text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #191919;
+  padding-bottom: 20px;
+}
+.tagline {
+  text-align: left;
+}
+.checkBoxContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.circleContainer {
+  border: 1px solid #191919;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  background: #006fff;
+  border-radius: 50%;
+  display: block;
+}
+.label {
+  display: block;
+  padding-bottom: 5px;
+  cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #191919;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+.ratingText {
+  padding: 0;
+}
+.textarea {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 14px 12px;
+  width: 100%;
+  outline: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #191919;
+  margin-bottom: 15px;
+}
+.button {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #ffffff;
+  background: #e0001a;
+  border: 1px solid #e0001a;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 13px 15px;
+  margin: 15px 0;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.backButton {
+  background: none;
+  border: 1px solid #e0001a;
+  color: #e0001a;
+  margin: 0;
+}
+.haveAccount {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  color: rgba(25, 25, 25, 0.5);
+  padding-top: 15px;
+}
+.signUp {
+  color: #e0001a;
+  padding-left: 5px;
+}
+@media only screen and (max-width: 400px) {
+  .wrapper {
+    padding: 20px 15px;
+    padding-bottom: 50px;
+  }
+}
