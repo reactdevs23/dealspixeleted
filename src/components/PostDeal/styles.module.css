@@ -1,6 +1,6 @@
 .postDealsContainer {
   max-width: 854px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   background: #fff;
   border-radius: 8px;
@@ -58,6 +58,15 @@
   font-size: 14px;
   line-height: 100%;
   color: #191919;
+  position: relative;
+  display: inline-block;
+}
+label.label::after {
+  content: "*";
+  position: absolute;
+  color: #e0001a;
+  right: -8px;
+  top: -3px;
 }
 .outof {
   font-family: "Inter";

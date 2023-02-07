@@ -128,7 +128,7 @@ const PostDeal = ({ setPostDeal }) => {
             onChange={recalculate}
           ></textarea>
           <div className={styles.dragAndChooseContainer}>
-            <p className={styles.label}>Images & Attachments*</p>
+            <label className={styles.label}>Images & Attachments</label>
             <div className={styles.dragAndChose}>
               {" "}
               <MyDropzone />

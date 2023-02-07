@@ -1,6 +1,7 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 7px 0;
   width: 100%;
 }
@@ -15,6 +16,14 @@
   line-height: 100%;
   color: #191919;
   padding-bottom: 7px;
+  position: relative;
+}
+.label::after {
+  content: "*";
+  position: absolute;
+  color: #e0001a;
+  right: -8px;
+  top: -3px;
 }
 
 .input {

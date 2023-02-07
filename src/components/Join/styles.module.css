@@ -2,11 +2,12 @@
   max-width: 482px;
 
   margin: 0 auto;
-  background: #e8e8e8;
+  background: #f5f5f5;
   padding: 30px;
   padding-bottom: 50px;
   border-radius: 8px;
   position: relative;
+  width: 100%;
 }
 .title {
   font-family: "Veneer";
@@ -66,6 +67,10 @@
   background: #006fff;
   border-radius: 50%;
   display: block;
+  cursor: none;
+}
+.labelAndTextArea {
+  padding-top: 15px;
 }
 .label {
   display: block;
@@ -77,8 +82,16 @@
   font-size: 14px;
   line-height: 100%;
   color: #191919;
-  padding-top: 15px;
-  padding-bottom: 7px;
+
+  position: relative;
+  display: inline-block;
+}
+label.label::after {
+  content: "*";
+  position: absolute;
+  color: #e0001a;
+  right: -8px;
+  top: -3px;
 }
 .ratingText {
   padding: 0;
@@ -96,6 +109,7 @@
   font-size: 14px;
   line-height: 100%;
   color: #191919;
+  margin-top: 7px;
   margin-bottom: 15px;
 }
 .button {
@@ -127,8 +141,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 13px 15px;
+  gap: 8px;
+  padding: 9px 15px;
   width: 100%;
+  border: 1px solid #e8e8e8;
+}
+.googleIcon {
+  font-size: 30px;
 }
 .backButton {
   background: none;

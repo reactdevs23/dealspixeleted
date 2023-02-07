@@ -1,0 +1,58 @@
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: -0.005em;
+  color: rgb(25, 25, 25, 0.9);
+}
+.button {
+  border-radius: 33px;
+  border: 0;
+  border-radius: 33px;
+  cursor: pointer;
+  height: 20.84px;
+  position: relative;
+  width: 44px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #c5c5c5;
+}
+
+/* .button:hover {
+  background-color: lightgray;
+} */
+.button:focus,
+.button:active {
+  outline: none;
+}
+.button::-moz-focus-inner {
+  border: 0;
+}
+
+.pin {
+  background-color: white;
+  border-radius: 50%;
+  height: 15.92px;
+  width: 15.92px;
+  left: 2px;
+  position: absolute;
+  top: 51%;
+  transform: translateY(-50%);
+
+  transition: all ease 0.5s;
+}
+
+.on {
+  background: #e0001a;
+}
+
+.on .pin {
+  left: 25px;
+}

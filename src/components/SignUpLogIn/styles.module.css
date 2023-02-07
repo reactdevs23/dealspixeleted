@@ -1,0 +1,19 @@
+.signUpContainer,
+.logInContainer {
+  min-height: calc(100vh - 90px);
+  width: 100%;
+  background-color: #013c5b;
+  display: flex;
+  align-items: center;
+}
+.signUp,
+.logIn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

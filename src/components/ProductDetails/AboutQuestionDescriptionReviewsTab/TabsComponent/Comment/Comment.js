@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { MdAssignment } from "react-icons/md";
+import WriteReview from "../../../../Join/WriteReview";
+import Modal from "../../../../Modal/Modal";
 
 const Comment = () => {
+  const [writeReview, setWriteReview] = useState(false);
   return (
     <div className={styles.wrapper}>
       <div className={styles.questionAndAnswer}>
@@ -15,7 +18,12 @@ const Comment = () => {
             </p>
           </div>
           <div className={styles.buttonContainer}>
-            <button className={styles.button}>Leave a Comment</button>
+            <button
+              className={styles.button}
+              onClick={() => setWriteReview(true)}
+            >
+              Leave a Comment
+            </button>
           </div>
         </div>
         <div className={styles.messageBox}>
@@ -27,6 +35,11 @@ const Comment = () => {
           </p>
         </div>
       </div>
+      {writeReview && (
+        <Modal setModal={setWriteReview}>
+          <WriteReview setWriteReview={setWriteReview} />
+        </Modal>
+      )}
     </div>
   );
 };

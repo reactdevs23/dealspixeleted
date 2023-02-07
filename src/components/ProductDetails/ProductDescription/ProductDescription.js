@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiTwotoneLike, AiTwotoneDislike } from "react-icons/ai";
 import { dealhunder } from "../../../assets/images/images";
 import { BsFillShareFill } from "react-icons/bs";
 import { AiFillStar } from "react-icons/ai";
 import styles from "./styles.module.css";
+import Modal from "../../Modal/Modal";
+import ShareComponent from "../../ShareComponent/ShareComponent";
 
 const ProductDescription = () => {
+  const [share, setShare] = useState(false);
   const keyFeature = [
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     "Constructed with sturdy, high quality materials",
@@ -49,7 +52,7 @@ const ProductDescription = () => {
               <AiTwotoneDislike className={styles.like} />
             </p>
           </div>
-          <div className={styles.share}>
+          <div className={styles.share} onClick={() => setShare(true)}>
             <BsFillShareFill className={styles.like} />{" "}
             <span className={`${styles.dealtext} ${styles.shareText}`}>
               Share
@@ -70,6 +73,11 @@ const ProductDescription = () => {
           </div>
         </div>
       </div>
+      {share && (
+        <Modal setModal={setShare}>
+          <ShareComponent setShare={setShare} />
+        </Modal>
+      )}
     </div>
   );
 };

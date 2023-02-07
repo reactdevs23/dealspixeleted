@@ -44,17 +44,19 @@ const AskQuestion = ({ setAskQuestion }) => {
           <Input {...el} key={i} value={values[el.name]} onChange={onChange} />
         ))}
 
-        <p htmlFor="" className={styles.label}>
-          Your Question
-        </p>
-        <textarea
-          name="yourquestion"
-          id="textarea"
-          className={styles.textarea}
-          cols="30"
-          rows="5"
-          placeholder="Your Question"
-        ></textarea>
+        <div className={styles.labelAndTextArea}>
+          <label htmlFor="textarea" className={styles.label}>
+            Your Question
+          </label>
+          <textarea
+            name="yourquestion"
+            id="textarea"
+            className={styles.textarea}
+            cols="30"
+            rows="5"
+            placeholder="Your Question"
+          ></textarea>
+        </div>
         <button className={styles.button}>Submit</button>
         <Link to="/signin" className={`${styles.button} ${styles.backButton}`}>
           Sign in

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import CheckBox from "../Checkbox/CheckBox";
-
+import { FcGoogle } from "react-icons/fc";
 import Input from "../Input/Input";
 import styles from "./styles.module.css";
 const Join = () => {
@@ -29,9 +29,7 @@ const Join = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  const responseGoogle = (response) => {
-    // console.log(response);
-  };
+
   return (
     <div className={styles.wrapper}>
       <h3 className={styles.title}>Join Deals Pixelated</h3>
@@ -48,15 +46,21 @@ const Join = () => {
           />
         </div>
 
-        <button className={styles.button}>Sign in</button>
+        <button className={styles.button}>Sign Up</button>
 
         <a href="#/" className={styles.googleButton}>
-          FcGoogle Sign in with Google
+          <FcGoogle className={styles.googleIcon} /> Sign Up with Google
         </a>
-        <p className={styles.haveAccount}>
+        {/* <p className={styles.haveAccount}>
           Don’t have an account?
           <Link className={styles.signUp} to="/signup">
             Sign up
+          </Link>
+        </p> */}
+        <p className={styles.haveAccount}>
+          Already a member?
+          <Link className={styles.signUp} to="/login">
+            Login
           </Link>
         </p>
       </form>

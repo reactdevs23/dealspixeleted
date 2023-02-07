@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   logo,
   searchIcon,
@@ -13,7 +14,9 @@ const Navbar = () => {
     <section className={styles.navbarContainer}>
       <header className={styles.navbar}>
         <div className={styles.logoAndSearch}>
-          <img src={logo} alt="#" className={styles.logo} />
+          <Link to="/">
+            <img src={logo} alt="#" className={styles.logo} />
+          </Link>
           <div className={styles.searchContainer}>
             <img src={searchIcon} alt="#" />
             <input
@@ -28,10 +31,10 @@ const Navbar = () => {
             <img src={notification} alt="#" className={styles.icon} />
             <p className={styles.item}>Deal Alerts</p>
           </div>{" "}
-          <div className={styles.iconAndItem}>
+          <Link to="/signup" className={styles.iconAndItem}>
             <img src={user} alt="#" className={styles.icon} />
             <p className={styles.item}>Sign Up</p>
-          </div>
+          </Link>
           <button className={styles.button} onClick={() => setPostDeal(true)}>
             Post a Deal
           </button>

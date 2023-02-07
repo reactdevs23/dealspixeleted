@@ -75,7 +75,7 @@ const QuestionAndAnswer = () => {
         </div>
       </div>
       {askQuestion && (
-        <Modal>
+        <Modal setModal={setAskQuestion}>
           <AskQuestion setAskQuestion={setAskQuestion} />
         </Modal>
       )}

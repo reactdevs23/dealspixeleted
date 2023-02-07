@@ -39,6 +39,7 @@ import judge from "./judge.svg";
 import hunter from "./hunter.svg";
 import finder from "./finder.svg";
 import profilePage from "./profilePage.png";
+import bigLogo from "./bigLogo.svg";
 
 export {
   product1,
@@ -80,4 +81,5 @@ export {
   fromthread,
   dealscore,
   view,
+  bigLogo,
 };

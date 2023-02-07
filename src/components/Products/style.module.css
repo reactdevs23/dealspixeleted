@@ -2,15 +2,100 @@
   background: #f5f5f5;
 }
 .products {
-  max-width: 1440px;
-  width: 90%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 25px 20px;
+  padding-bottom: 50px;
+}
+.dropdownAndToggle {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: flex-start;
+  gap: 15px;
+}
+.dropDownContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 6px 8px;
+}
+.avialableAndShort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  color: rgb(25, 25, 25, 0.72);
+}
+.sortingContainer {
+  position: relative;
+}
+.sortText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+
+  color: rgba(25, 25, 25, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.sort {
+  color: rgba(25, 25, 25);
+  cursor: pointer;
+}
+.arrow {
+  color: rgba(25, 25, 25);
+  cursor: pointer;
+}
+.sortingItem {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid rgb(26, 26, 26, 0.4);
+  padding: 10px;
+  border-radius: 4px;
+}
+.item {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 143%;
+  text-transform: capitalize;
+  color: rgba(25, 25, 25, 0.72);
+  padding: 4px 0;
+}
+@media only screen and (max-width: 767px) {
+  .dropdownAndToggle {
+    grid-template-columns: 1fr;
+  }
 }
 @media only screen and (max-width: 520px) {
   .products {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+@media only screen and (max-width: 330px) {
+  .text {
+    font-size: 12px;
   }
 }

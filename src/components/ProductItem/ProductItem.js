@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./style.module.css";
 import { like, comment, share } from "../../assets/images/images";
-
+import { Link } from "react-router-dom";
 const ProductItem = ({
   dealhunter,
   sellerName,
@@ -19,6 +19,7 @@ const ProductItem = ({
   type,
   backgroundColor,
   color,
+  index,
 }) => {
   return (
     <>
@@ -43,7 +44,9 @@ const ProductItem = ({
             </div>
           )}
         </div>
-        <img src={image} alt="#" className={styles.product} />
+        <Link to={`/${index + 1}`}>
+          <img src={image} alt="#" className={styles.product} />
+        </Link>
         <p className={styles.via}>
           Via <span className={styles.companyName}>{via}</span>
         </p>

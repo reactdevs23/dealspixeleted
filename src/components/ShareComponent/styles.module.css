@@ -31,6 +31,7 @@
   transform: translateY(-50%);
   right: 15px;
   font-weight: 300;
+  cursor: pointer;
 }
 .form {
   padding: 30px;

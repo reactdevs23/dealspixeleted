@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import CheckBox from "../Checkbox/CheckBox";
-
+import { FcGoogle } from "react-icons/fc";
 import Input from "../Input/Input";
 import styles from "./styles.module.css";
 const WelcomeBack = () => {
@@ -29,9 +29,7 @@ const WelcomeBack = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  const responseGoogle = (response) => {
-    // console.log(response);
-  };
+
   return (
     <div className={styles.wrapper}>
       <h3 className={styles.title}>Welcome Back</h3>
@@ -49,14 +47,16 @@ const WelcomeBack = () => {
           <p className={styles.signUp}>Forgot Password</p>
         </div>
 
-        <button className={styles.button}>Sign in</button>
+        <Link to="/profile">
+          <button className={styles.button}>Sign in</button>
+        </Link>
 
         <a href="#/" className={styles.googleButton}>
-          FcGoogle Sign in with Google
+          <FcGoogle className={styles.googleIcon} /> Sign in with Google
         </a>
         <p className={styles.haveAccount}>
           Sign up Not a member?
-          <Link className={styles.signUp} to="/createaccount">
+          <Link className={styles.signUp} to="/signup">
             Create an Account
           </Link>
         </p>

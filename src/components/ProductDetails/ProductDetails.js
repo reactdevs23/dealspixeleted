@@ -1,4 +1,6 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import { products } from "../../assets/data/product";
 import { dealscore, view } from "../../assets/images/images";
 import { MdOutlineMessage } from "react-icons/md";
 import { AiFillHome } from "react-icons/ai";
@@ -16,12 +18,13 @@ export const ProductDetails = ({
   views = 1239,
   comments = "4",
 }) => {
+  const { id } = useParams();
   return (
     <>
       <section className="container">
         <p className={styles.link}>
-          <AiFillHome className={styles.home} /> / Previous Link here / Dancelf
-          Christmas Laser Lighted Gift Boxes.
+          <AiFillHome className={styles.home} /> / Home /{" "}
+          {products[id - 1].title}
         </p>
         <div className={styles.createAtContainer}>
           <p className={styles.text}>

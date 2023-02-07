@@ -10,8 +10,7 @@ import {
 } from "../../assets/images/images";
 import styles from "./styles.module.css";
 
-const ShareComponent = () => {
-  const [modal, setModal] = useState(false);
+const ShareComponent = ({ setShare }) => {
   const socials = [
     { icon: messenger, text: "Messenger", to: "#" },
     { icon: whatsapp, text: "WhatsApp", to: "#" },
@@ -24,7 +23,7 @@ const ShareComponent = () => {
         <h2 className={styles.title}>Share</h2>
         <TfiClose
           className={styles.close}
-          onClick={() => setModal((prev) => !prev)}
+          onClick={() => setShare((prev) => !prev)}
         />
       </div>
       <div className={styles.form}>

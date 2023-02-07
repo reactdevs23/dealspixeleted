@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import Input from "../Input/Input";
 import styles from "./styles.module.css";
 const WriteReview = () => {
@@ -11,7 +11,7 @@ const WriteReview = () => {
   const [rating, setRating] = useState(null);
   const inputs = [
     {
-      label: "Your E-mail*",
+      label: "Your E-mail",
       type: "email",
       name: "email",
       placeholder: "Enter your email",
@@ -32,24 +32,22 @@ const WriteReview = () => {
           <Input {...el} key={i} value={values[el.name]} onChange={onChange} />
         ))}
         <div className={styles.ratingWrapper}>
-          <p className={styles.label}>Rating</p>
+          <label className={styles.label}>Rating</label>
           <div className={styles.ratingContainer}>
             <span className={`${styles.label} ${styles.ratingText}`}>Bad</span>
             {[...new Array(5)].map((_, i) => (
-              <p
+              <div
                 className={styles.circleContainer}
                 key={i}
                 onClick={() => setRating(i + 1)}
               >
-                {i + 1 === rating && <span className={styles.circle}></span>}
-              </p>
+                <span className={i + 1 === rating && styles.circle}></span>
+              </div>
             ))}
             <span className={`${styles.label} ${styles.ratingText}`}>Good</span>
           </div>
         </div>
-        <p htmlFor="" className={styles.label}>
-          Your Review
-        </p>
+        <p className={styles.label}>Your Review</p>
         <textarea
           name="yourquestion"
           id="textarea"
@@ -59,9 +57,9 @@ const WriteReview = () => {
           placeholder="Your Question"
         ></textarea>
         <button className={styles.button}>Submit</button>
-        <button className={`${styles.button} ${styles.backButton}`}>
+        <Link to="/signin" className={`${styles.button} ${styles.backButton}`}>
           Sign in
-        </button>
+        </Link>
       </form>
     </div>
   );
