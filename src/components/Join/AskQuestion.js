@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { TfiClose } from "react-icons/tfi";
 
 import Input from "../Input/Input";
 import styles from "./styles.module.css";
-const AskQuestion = () => {
+const AskQuestion = ({ setAskQuestion }) => {
   const [values, setValues] = useState({
     product: "",
     email: "",
@@ -30,6 +31,10 @@ const AskQuestion = () => {
 
   return (
     <div className={styles.wrapper}>
+      <TfiClose
+        className={styles.close}
+        onClick={() => setAskQuestion(false)}
+      />
       <h3 className={`${styles.title} ${styles.heading}`}>Ask Question</h3>
       <p className={`${styles.text} ${styles.tagline}`}>
         Find and share great deals

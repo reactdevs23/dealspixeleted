@@ -6,6 +6,7 @@
   padding: 30px;
   padding-bottom: 50px;
   border-radius: 8px;
+  position: relative;
 }
 .title {
   font-family: "Veneer";
@@ -116,6 +117,19 @@
   display: inline-block;
   text-align: center;
 }
+.googleButton {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 15px;
+  width: 100%;
+}
 .backButton {
   background: none;
   border: 1px solid #e0001a;
@@ -135,6 +149,12 @@
 .signUp {
   color: #e0001a;
   padding-left: 5px;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 400px) {
   .wrapper {
