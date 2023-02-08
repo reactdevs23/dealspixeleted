@@ -7,9 +7,16 @@ import { AiFillStar } from "react-icons/ai";
 import styles from "./styles.module.css";
 import Modal from "../../Modal/Modal";
 import ShareComponent from "../../ShareComponent/ShareComponent";
+import { useDataContext } from "../../context";
 
 const ProductDescription = () => {
+  const { bottom } = useDataContext();
   const [share, setShare] = useState(false);
+  const [like, setLike] = useState(null);
+  const likedOrNot = [
+    <AiTwotoneLike className={styles.like} />,
+    <AiTwotoneDislike className={styles.like} />,
+  ];
   const keyFeature = [
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     "Constructed with sturdy, high quality materials",
@@ -19,7 +26,7 @@ const ProductDescription = () => {
     "Made from white sisal thread, these six, eight",
   ];
   const scrollToBottom = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    bottom.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <div>
@@ -45,18 +52,26 @@ const ProductDescription = () => {
         </div>
       </div>
       <div className={styles.detailsShareDeals}>
-        <button className={styles.seeDetails} onClick={scrollToBottom}>
+        <button
+          className={styles.seeDetails}
+          onClick={scrollToBottom}
+          id="scroll-to-bottom"
+        >
           See Details
         </button>
         <div className={styles.dealAndShare}>
           <div className={styles.deals}>
             <p className={styles.dealText}>Good deal?</p>
-            <p className={styles.likeContainer}>
-              <AiTwotoneLike className={styles.like} />
-            </p>
-            <p className={styles.likeContainer}>
-              <AiTwotoneDislike className={styles.like} />
-            </p>
+            {likedOrNot.map((el, i) => (
+              <p
+                onClick={() => setLike(i)}
+                className={`${styles.likeContainer} ${
+                  i === 0 && like === i && styles.liked
+                }  ${i === 1 && like === i && styles.disLiked}`}
+              >
+                {el}
+              </p>
+            ))}
           </div>
           <div className={styles.share} onClick={() => setShare(true)}>
             <BsFillShareFill className={styles.like} />{" "}

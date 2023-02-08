@@ -123,6 +123,12 @@
   color: rgba(25, 25, 25, 0.4);
   cursor: pointer;
 }
+.liked .like {
+  color: #219653;
+}
+.disLiked .like {
+  color: #e0001a;
+}
 .share {
   display: flex;
   align-items: center;

@@ -1,7 +1,8 @@
-import { useState, useContext, createContext } from "react";
+import { useState, useContext, createContext, useRef } from "react";
 const StateData = createContext();
 
 export const ContextProvider = ({ children }) => {
+  const bottom = useRef();
   const filteringText = [];
   const question = [
     {
@@ -23,6 +24,7 @@ export const ContextProvider = ({ children }) => {
         submitComment,
         setSubmitComment,
         filteringText,
+        bottom,
       }}
     >
       {children}
