@@ -56,22 +56,18 @@ const Comments = ({ currentUserId, setWriteReview }) => {
             </button>
           </div>
         </div>
-        <div className={styles.comments}>
-          {/* <CommentForm submitLabel="Write" handleSubmit={addComment} /> */}
-          <div className={styles.commentsContainer}>
-            {rootComments.map((rootComment) => (
-              <Comment
-                key={rootComment.id}
-                comment={rootComment}
-                replies={getReplies(rootComment.id)}
-                activeComment={activeComment}
-                setActiveComment={setActiveComment}
-                addComment={addComment}
-                currentUserId={currentUserId}
-              />
-            ))}
-          </div>
-        </div>{" "}
+
+        {rootComments.map((rootComment) => (
+          <Comment
+            key={rootComment.id}
+            comment={rootComment}
+            replies={getReplies(rootComment.id)}
+            activeComment={activeComment}
+            setActiveComment={setActiveComment}
+            addComment={addComment}
+            currentUserId={currentUserId}
+          />
+        ))}
       </div>
     </div>
   );
