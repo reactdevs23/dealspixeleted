@@ -5,7 +5,7 @@ const Modal = ({ children, setModal }) => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "scroll";
+      document.body.style.overflowY = "scroll";
     };
   }, []);
   return (

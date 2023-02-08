@@ -133,6 +133,12 @@
     padding-bottom: 20px;
   }
 }
+@media only screen and (max-width: 520px) {
+  .aboutOp {
+    padding: 22px 18px;
+  }
+}
+
 @media only screen and (max-width: 450px) {
   .details {
     grid-template-columns: auto;

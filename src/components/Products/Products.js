@@ -6,8 +6,16 @@ import Header from "./Header/Header";
 import { FiChevronUp, FiChevronDown } from "react-icons/fi";
 import DropDownComponent from "./DropDownComponent/DropDownComponent";
 import ToggleButton from "./Toggle/Toggle";
+import Paginations from "../Pagination/Pagination";
 
 const Products = () => {
+  const [activePage, setActivePage] = useState(1);
+  const itemsPerPage = 8;
+  const indexOfLastItem = activePage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = products.slice(indexOfFirstItem, indexOfLastItem);
+  // filtering state
+
   const filteringData = [
     {
       title: "Category",
@@ -64,12 +72,17 @@ const Products = () => {
           <div className={styles.sortingContainer}>
             <p className={styles.sortText}>
               Sort by{" "}
-              <p
+              <span
                 className={styles.sort}
                 onClick={() => setSortDropDownOpen((prev) => !prev)}
               >
-                Newest <FiChevronDown className={styles.arrow} />
-              </p>{" "}
+                Newest{" "}
+                {sortDropDownOpen ? (
+                  <FiChevronUp className={styles.arrow} />
+                ) : (
+                  <FiChevronDown className={styles.arrow} />
+                )}
+              </span>{" "}
             </p>
             {sortDropDownOpen && (
               <div className={styles.sortingItem}>
@@ -83,9 +96,21 @@ const Products = () => {
           </div>
         </div>
         <div className={styles.products}>
-          {products.map((el, i) => (
+          {currentItems.map((el, i) => (
             <ProductItem {...el} index={i} key={i} />
           ))}
+        </div>
+        <div className={styles.paginationContainer}>
+          <Paginations
+            itemsPerPage={itemsPerPage}
+            totalItemsCount={products.length}
+            activePage={activePage}
+            setActivePage={setActivePage}
+          />
+          <p className={styles.pageNumberInfo}>
+            Showing {indexOfFirstItem + 1} to {indexOfFirstItem + itemsPerPage}{" "}
+            of {products.length} ( {products.length / itemsPerPage} Pages)
+          </p>
         </div>
       </div>
     </section>

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { TfiClose } from "react-icons/tfi";
 import { Link } from "react-router-dom";
+import { useDataContext } from "../context";
 import Input from "../Input/Input";
 import styles from "./styles.module.css";
-const WriteReview = () => {
+const WriteReview = ({ setWriteReview }) => {
+  const { setSubmitComment } = useDataContext();
   const [values, setValues] = useState({
     email: "",
 
@@ -23,6 +26,10 @@ const WriteReview = () => {
 
   return (
     <div className={styles.wrapper}>
+      <TfiClose
+        className={styles.close}
+        onClick={() => setWriteReview(false)}
+      />
       <h3 className={`${styles.title} ${styles.heading}`}>Write Review</h3>
       <p className={`${styles.text} ${styles.tagline}`}>
         Find and share great deals
@@ -56,9 +63,18 @@ const WriteReview = () => {
           rows="5"
           placeholder="Your Question"
         ></textarea>
-        <button className={styles.button}>Submit</button>
-        <Link to="/signin" className={`${styles.button} ${styles.backButton}`}>
-          Sign in
+        <button
+          className={styles.button}
+          onClick={(e) => {
+            e.preventDefault();
+            setSubmitComment(true);
+            setWriteReview(false);
+          }}
+        >
+          Submit
+        </button>
+        <Link to="/profile" className={`${styles.button} ${styles.backButton}`}>
+          Back
         </Link>
       </form>
     </div>

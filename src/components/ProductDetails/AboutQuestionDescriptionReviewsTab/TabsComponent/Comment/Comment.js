@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { MdAssignment } from "react-icons/md";
-import WriteReview from "../../../../Join/WriteReview";
+import WriteReview from "../../../../ModalAndSignUpSignIn/WriteReview";
 import Modal from "../../../../Modal/Modal";
+import { useDataContext } from "../../../../context";
+import Comments from "../../../../comments/Comments";
 
 const Comment = () => {
   const [writeReview, setWriteReview] = useState(false);
+  const { submitComment } = useDataContext();
   return (
     <div className={styles.wrapper}>
       <div className={styles.questionAndAnswer}>
@@ -20,7 +23,10 @@ const Comment = () => {
           <div className={styles.buttonContainer}>
             <button
               className={styles.button}
-              onClick={() => setWriteReview(true)}
+              onClick={(e) => {
+                e.preventDefault();
+                setWriteReview(true);
+              }}
             >
               Leave a Comment
             </button>
@@ -35,6 +41,9 @@ const Comment = () => {
           </p>
         </div>
       </div>
+      {submitComment && (
+        <Comments currentUserId="1" setWriteReview={setWriteReview} />
+      )}
       {writeReview && (
         <Modal setModal={setWriteReview}>
           <WriteReview setWriteReview={setWriteReview} />

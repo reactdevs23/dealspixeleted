@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { AiTwotoneLike, AiTwotoneDislike } from "react-icons/ai";
 import { dealhunder } from "../../../assets/images/images";
 import { BsFillShareFill } from "react-icons/bs";
@@ -17,6 +18,9 @@ const ProductDescription = () => {
     "Customizable RGB lighting",
     "Made from white sisal thread, these six, eight",
   ];
+  const scrollToBottom = () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  };
   return (
     <div>
       <h3 className={styles.title}>
@@ -41,7 +45,9 @@ const ProductDescription = () => {
         </div>
       </div>
       <div className={styles.detailsShareDeals}>
-        <button className={styles.seeDetails}>See Details</button>
+        <button className={styles.seeDetails} onClick={scrollToBottom}>
+          See Details
+        </button>
         <div className={styles.dealAndShare}>
           <div className={styles.deals}>
             <p className={styles.dealText}>Good deal?</p>
@@ -61,11 +67,15 @@ const ProductDescription = () => {
         </div>{" "}
       </div>
       <div className={styles.dealHunter}>
-        <img src={dealhunder} alt="#" className={styles.profileImage} />
+        <Link to="/profile">
+          <img src={dealhunder} alt="#" className={styles.profileImage} />
+        </Link>
         <div className={styles.headingAndthanksBox}>
-          <h6 className={styles.heading}>
-            basketballrhee | Staff posted this deal.
-          </h6>
+          <Link to="/profile">
+            <h6 className={styles.heading}>
+              basketballrhee | Staff posted this deal.
+            </h6>
+          </Link>
 
           <div className={styles.thanksBox}>
             {" "}

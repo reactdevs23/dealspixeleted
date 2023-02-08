@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AiFillStar, AiTwotoneLike } from "react-icons/ai";
 import { HiShoppingBag } from "react-icons/hi";
 import { MdInsertComment } from "react-icons/md";
@@ -36,10 +37,15 @@ const AboutOp = () => {
         </div>
       </div>{" "}
       <div className={styles.dealHunter}>
-        <img src={dealhunder} alt="#" className={styles.profileImage} />{" "}
+        <Link to="/profile">
+          {" "}
+          <img src={dealhunder} alt="#" className={styles.profileImage} />
+        </Link>{" "}
         <div className={styles.headingAndthanksBox}>
           {" "}
-          <h6 className={styles.heading}>Basketballrhee | Staff </h6>{" "}
+          <Link to="/profile">
+            <h6 className={styles.heading}>Basketballrhee | Staff </h6>
+          </Link>{" "}
           <p className={`${styles.keyFeature} ${styles.joinDate}`}>
             Joined Jan 2022 Deals Pixelated Staff Deal Hunter{" "}
           </p>{" "}

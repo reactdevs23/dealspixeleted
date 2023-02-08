@@ -130,6 +130,7 @@ label.label::after {
   width: 100%;
   display: inline-block;
   text-align: center;
+  cursor: pointer;
 }
 .googleButton {
   font-family: "Inter";

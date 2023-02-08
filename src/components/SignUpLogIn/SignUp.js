@@ -1,6 +1,6 @@
 import React from "react";
 import { bigLogo } from "../../assets/images/images";
-import Join from "../Join/Join";
+import Join from "../ModalAndSignUpSignIn/Join";
 import styles from "./styles.module.css";
 
 const SignUp = () => {

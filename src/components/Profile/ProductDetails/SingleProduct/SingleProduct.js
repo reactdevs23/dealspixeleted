@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AiFillLike } from "react-icons/ai";
 import { like, comment, share } from "../../../../assets/images/images";
 import styles from "./styles.module.css";
 
 const SingleProduct = ({
+  index,
   peopleLiked,
   time,
   discount,
@@ -20,7 +22,7 @@ const SingleProduct = ({
   color,
 }) => {
   return (
-    <>
+    <Link to={`/${index + 1}`}>
       <div className={styles.productItem}>
         <div className={styles.header}>
           <div className={styles.profile}>
@@ -68,7 +70,7 @@ const SingleProduct = ({
           <img src={share} alt="#" className={styles.like} />
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 

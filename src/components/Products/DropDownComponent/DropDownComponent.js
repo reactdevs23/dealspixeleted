@@ -14,7 +14,11 @@ const DropDownComponent = ({ title, items, value, setValue, index, color }) => {
         <p className={styles.title} style={{ color: color }}>
           {title}
         </p>
-        <BiChevronDown className={styles.arrow} color={color} />
+        {active ? (
+          <BiChevronUp className={styles.arrow} color={color} />
+        ) : (
+          <BiChevronDown className={styles.arrow} color={color} />
+        )}
       </div>
       {active && (
         <div className={styles.dropDowns} style={{ borderColor: color }}>

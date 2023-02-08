@@ -3,12 +3,11 @@ import styles from "./styles.module.css";
 function ToggleButton({ text }) {
   const [on, setOnState] = useState(false);
 
-  const toggle = () => setOnState((o) => !o);
+  const toggle = () => setOnState((prev) => !prev);
   return (
     <div className={styles.buttonContainer}>
       <button
         className={`${on ? styles.on : styles.off} ${styles.button}`}
-        on={on}
         onClick={toggle}
       >
         <span className={styles.pin} />

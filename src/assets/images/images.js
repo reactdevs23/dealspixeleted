@@ -40,6 +40,10 @@ import hunter from "./hunter.svg";
 import finder from "./finder.svg";
 import profilePage from "./profilePage.png";
 import bigLogo from "./bigLogo.svg";
+import user1 from "./user1.svg";
+import user2 from "./user2.svg";
+import user3 from "./user3.svg";
+import user4 from "./user4.svg";
 
 export {
   product1,
@@ -82,4 +86,8 @@ export {
   dealscore,
   view,
   bigLogo,
+  user1,
+  user2,
+  user3,
+  user4,
 };

@@ -4,7 +4,9 @@ import { TfiClose } from "react-icons/tfi";
 
 import Input from "../Input/Input";
 import styles from "./styles.module.css";
+import { useDataContext } from "../context";
 const AskQuestion = ({ setAskQuestion }) => {
+  const { setSubmitQuestion } = useDataContext();
   const [values, setValues] = useState({
     product: "",
     email: "",
@@ -16,7 +18,7 @@ const AskQuestion = ({ setAskQuestion }) => {
       label: "Product",
       type: "text",
       name: "product",
-      placeholder: "Enter your Name",
+      placeholder: "Enter Product Name",
     },
     {
       label: "Your E-mail*",
@@ -57,10 +59,23 @@ const AskQuestion = ({ setAskQuestion }) => {
             placeholder="Your Question"
           ></textarea>
         </div>
-        <button className={styles.button}>Submit</button>
-        <Link to="/signin" className={`${styles.button} ${styles.backButton}`}>
-          Sign in
-        </Link>
+        <button
+          className={styles.button}
+          onClick={(e) => {
+            e.preventDefault();
+            setSubmitQuestion(true);
+
+            setAskQuestion(false);
+          }}
+        >
+          Submit
+        </button>
+        <div
+          className={`${styles.button} ${styles.backButton}`}
+          onClick={() => setAskQuestion(false)}
+        >
+          Back
+        </div>
       </form>
     </div>
   );

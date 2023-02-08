@@ -1,6 +1,6 @@
 import { bigLogo } from "../../assets/images/images";
 
-import WelcomeBack from "../Join/WelcomeBack";
+import WelcomeBack from "../ModalAndSignUpSignIn/WelcomeBack";
 import styles from "./styles.module.css";
 
 const Login = () => {

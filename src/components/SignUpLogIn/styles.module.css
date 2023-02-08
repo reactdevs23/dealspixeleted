@@ -17,3 +17,12 @@
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 991px) {
+  .signUp,
+  .logIn {
+    grid-template-columns: 1fr;
+  }
+  .logoContainer {
+    display: none;
+  }
+}
