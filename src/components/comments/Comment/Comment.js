@@ -29,7 +29,7 @@ const Comment = ({
   return (
     <div
       key={comment.id}
-      className={`${styles.comment} ${parentId == null && styles.border}`}
+      className={`${styles.myComment} ${parentId == null && styles.border}`}
     >
       <div
         className={`${styles.commentImageContainer} ${

@@ -7,6 +7,7 @@ import { FiChevronUp, FiChevronDown } from "react-icons/fi";
 import DropDownComponent from "./DropDownComponent/DropDownComponent";
 import ToggleButton from "./Toggle/Toggle";
 import Paginations from "../Pagination/Pagination";
+import { useDataContext } from "../context";
 
 const Products = () => {
   const [activePage, setActivePage] = useState(1);
@@ -17,37 +18,68 @@ const Products = () => {
   // filtering state
   const [category, setCategory] = useState("");
   const [store, setStore] = useState("");
+  const [community, setCommunity] = useState("");
+  const [brand, setBrand] = useState("");
+  const [collection, setCollection] = useState("");
+  const [condition, setCondition] = useState("");
+  const [offerStatus, setOfferStatus] = useState("");
+  const { filteringText } = useDataContext();
+
+  const filterdText = [
+    category,
+    store,
+    community,
+    brand,
+    collection,
+    condition,
+    offerStatus,
+  ];
+  console.log(filterdText);
 
   const filteringData = [
     {
       title: "Category",
+      value: category,
+      setValue: setCategory,
       items: ["category1", "category2", "category3", "category4"],
     },
     {
       title: "store",
+      value: store,
+      setValue: setStore,
       items: ["Apple", "Samsung", "Apple", "Apple"],
       color: "#E0001A",
     },
     {
       title: "community",
+      value: community,
+      setValue: setCommunity,
       items: ["category1", "category2", "category3", "category4"],
       color: "#E0001A",
     },
     {
       title: "brand",
+      value: brand,
+      setValue: setBrand,
       items: ["category1", "category2", "category3", "category4"],
       color: "#E0001A",
     },
     {
       title: "collection",
+      value: collection,
+      setValue: setCollection,
       items: ["category1", "category2", "category3", "category4"],
     },
     {
       title: "condition",
+      value: condition,
+      setValue: setCondition,
       items: ["category1", "category2", "category3", "category4"],
     },
     {
       title: "offerstatus",
+      value: offerStatus,
+      setValue: setOfferStatus,
       items: ["category1", "category2", "category3", "category4"],
     },
   ];

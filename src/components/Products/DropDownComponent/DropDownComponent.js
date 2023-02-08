@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
+
 import styles from "./styles.module.css";
 
 const DropDownComponent = ({ title, items, value, setValue, index, color }) => {
   const [active, setActive] = useState(false);
+
   return (
     <div className={styles.wrapper}>
       <div
@@ -27,7 +29,10 @@ const DropDownComponent = ({ title, items, value, setValue, index, color }) => {
               className={styles.items}
               key={i}
               style={{ color: color }}
-              onClick={() => setActive(false)}
+              onClick={() => {
+                setActive(false);
+                setValue(el);
+              }}
             >
               {el}{" "}
             </p>

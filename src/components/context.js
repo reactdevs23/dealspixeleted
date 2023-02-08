@@ -2,6 +2,7 @@ import { useState, useContext, createContext } from "react";
 const StateData = createContext();
 
 export const ContextProvider = ({ children }) => {
+  const filteringText = [];
   const question = [
     {
       name: "Lima Islam   ",
@@ -21,6 +22,7 @@ export const ContextProvider = ({ children }) => {
         setSubmitQuestion,
         submitComment,
         setSubmitComment,
+        filteringText,
       }}
     >
       {children}
