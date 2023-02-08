@@ -27,7 +27,7 @@ const Comment = ({
   const replyId = parentId ? parentId : comment.id;
   // const createdAt = new Date(comment.createdAt).toLocaleDateString();
   return (
-    <div key={comment.id} className={styles.myComment}>
+    <section key={comment.id} className={styles.myComment}>
       <div
         className={`${styles.commentImageContainer} ${
           !parentId === null && styles.replyUser
@@ -106,7 +106,7 @@ const Comment = ({
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 
