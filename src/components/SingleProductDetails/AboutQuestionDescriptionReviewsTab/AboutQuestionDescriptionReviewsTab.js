@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDataContext } from "../../context";
-import ProductDescription from "../ProductDescription/ProductDescription";
 import styles from "./styles.module.css";
 import AboutOp from "./TabsComponent/AboutOp/AboutOp";
 import Comment from "./TabsComponent/Comment/Comment";

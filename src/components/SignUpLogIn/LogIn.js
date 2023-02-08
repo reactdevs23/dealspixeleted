@@ -1,6 +1,6 @@
 import { bigLogo } from "../../assets/images/images";
 
-import WelcomeBack from "../ModalAndSignUpSignIn/WelcomeBack";
+import LoginComponent from "../ModalAndSignUpSignIn/LogIn";
 import styles from "./styles.module.css";
 
 const Login = () => {
@@ -10,7 +10,7 @@ const Login = () => {
         <div className={styles.logoContainer}>
           <img src={bigLogo} alt="#" className={styles.logo} />
         </div>
-        <WelcomeBack />
+        <LoginComponent />
       </div>
     </div>
   );

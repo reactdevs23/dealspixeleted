@@ -5,7 +5,7 @@ import CheckBox from "../Checkbox/CheckBox";
 import { FcGoogle } from "react-icons/fc";
 import Input from "../Input/Input";
 import styles from "./styles.module.css";
-const Join = () => {
+const LogIn = () => {
   const [checked, setChecked] = useState(false);
   const [values, setValues] = useState({
     email: "",
@@ -32,35 +32,32 @@ const Join = () => {
 
   return (
     <div className={styles.wrapper}>
-      <h3 className={styles.title}>Join Deals Pixelated</h3>
-      <p className={styles.text}>Find and share great deals</p>
+      <h3 className={styles.title}>Welcome Back</h3>
+      <p className={styles.text}>Log In to your account below</p>
       <form className={styles.form}>
         {inputs.map((el, i) => (
           <Input {...el} key={i} value={values[el.name]} onChange={onChange} />
         ))}
-        <div>
+        <div className={styles.checkBoxContainer}>
           <CheckBox
             checked={checked}
             setChecked={setChecked}
             label="Remember for 30 days"
           />
+          <p className={styles.signUp}>Forgot Password</p>
         </div>
 
-        <button className={styles.button}>Sign Up</button>
+        <Link to="/profile">
+          <button className={styles.button}>Sign in</button>
+        </Link>
 
         <a href="#/" className={styles.googleButton}>
-          <FcGoogle className={styles.googleIcon} /> Sign Up with Google
+          <FcGoogle className={styles.googleIcon} /> Sign in with Google
         </a>
-        {/* <p className={styles.haveAccount}>
-          Don’t have an account?
-          <Link className={styles.signUp} to="/signup">
-            Sign up
-          </Link>
-        </p> */}
         <p className={styles.haveAccount}>
-          Already a member?
-          <Link className={styles.signUp} to="/login">
-            Login
+          Sign up Not a member?
+          <Link className={styles.signUp} to="/signup">
+            Create an Account
           </Link>
         </p>
       </form>
@@ -68,4 +65,4 @@ const Join = () => {
   );
 };
 
-export default Join;
+export default LogIn;

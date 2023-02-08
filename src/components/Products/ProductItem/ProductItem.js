@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./style.module.css";
-import { like, comment, share } from "../../assets/images/images";
+import { like, comment, share } from "../../../assets/images/images";
 import { Link } from "react-router-dom";
 const ProductItem = ({
   dealhunter,

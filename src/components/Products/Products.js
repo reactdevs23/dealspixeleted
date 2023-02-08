@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./style.module.css";
 import { products } from "../../assets/data/product";
-import ProductItem from "../ProductItem/ProductItem";
+import ProductItem from "./ProductItem/ProductItem";
 import Header from "./Header/Header";
 import { FiChevronUp, FiChevronDown } from "react-icons/fi";
 import { TfiClose } from "react-icons/tfi";
