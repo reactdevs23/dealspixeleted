@@ -15,6 +15,8 @@ const Products = () => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = products.slice(indexOfFirstItem, indexOfLastItem);
   // filtering state
+  const [category, setCategory] = useState("");
+  const [store, setStore] = useState("");
 
   const filteringData = [
     {
