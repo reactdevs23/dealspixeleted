@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
 import { products } from "../../assets/data/product";
 import ProductItem from "../ProductItem/ProductItem";
 import Header from "./Header/Header";
 import { FiChevronUp, FiChevronDown } from "react-icons/fi";
+import { TfiClose } from "react-icons/tfi";
 import DropDownComponent from "./DropDownComponent/DropDownComponent";
 import ToggleButton from "./Toggle/Toggle";
 import Paginations from "../Pagination/Pagination";
-import { useDataContext } from "../context";
 
 const Products = () => {
   const [activePage, setActivePage] = useState(1);
@@ -23,18 +23,8 @@ const Products = () => {
   const [collection, setCollection] = useState("");
   const [condition, setCondition] = useState("");
   const [offerStatus, setOfferStatus] = useState("");
-  const { filteringText } = useDataContext();
 
-  const filterdText = [
-    category,
-    store,
-    community,
-    brand,
-    collection,
-    condition,
-    offerStatus,
-  ];
-  console.log(filterdText);
+  const [filteredValues, setFilteredValues] = useState([]);
 
   const filteringData = [
     {
@@ -85,6 +75,10 @@ const Products = () => {
   ];
   const sorting = ["newest", "newesst", "newest"];
   const [sortDropDownOpen, setSortDropDownOpen] = useState(false);
+  const deleteFilterText = (i) => {
+    setFilteredValues(filteredValues.filter((el, index) => i !== index));
+  };
+
   return (
     <section className={`${styles.productsContainer} `}>
       {" "}
@@ -93,13 +87,32 @@ const Products = () => {
         <div className={styles.dropdownAndToggle}>
           <div className={styles.dropDownContainer}>
             {filteringData.map((el, i) => (
-              <DropDownComponent {...el} key={i} />
+              <DropDownComponent
+                {...el}
+                key={i}
+                setFilteredValues={setFilteredValues}
+              />
             ))}
           </div>
           <div className={styles.toggleContainer}>
             <ToggleButton text="Coupons" />
             <ToggleButton text="Top Offers " />
           </div>
+        </div>
+        <div className={styles.filteredTextContainer}>
+          {filteredValues.map(
+            (el, i) =>
+              el && (
+                <div
+                  className={styles.filteredText}
+                  key={i}
+                  onClick={() => deleteFilterText(i)}
+                >
+                  <span>{el}</span>
+                  <TfiClose className={styles.close} />
+                </div>
+              )
+          )}
         </div>
         <div className={styles.avialableAndShort}>
           <p className={styles.text}>3,908 products available</p>

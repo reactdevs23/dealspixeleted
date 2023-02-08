@@ -3,7 +3,15 @@ import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 
 import styles from "./styles.module.css";
 
-const DropDownComponent = ({ title, items, value, setValue, index, color }) => {
+const DropDownComponent = ({
+  title,
+  items,
+  value,
+  setValue,
+  index,
+  color,
+  setFilteredValues,
+}) => {
   const [active, setActive] = useState(false);
 
   return (
@@ -32,6 +40,7 @@ const DropDownComponent = ({ title, items, value, setValue, index, color }) => {
               onClick={() => {
                 setActive(false);
                 setValue(el);
+                setFilteredValues((prev) => [...prev, el]);
               }}
             >
               {el}{" "}

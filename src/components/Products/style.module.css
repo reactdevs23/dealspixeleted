@@ -28,6 +28,35 @@
   gap: 15px;
   padding: 6px 8px;
 }
+.filteredTextContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.filteredText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: #191919;
+  opacity: 0.5;
+  background: #ffffff;
+  border-radius: 39px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.close {
+  font-size: 12px;
+  cursor: pointer;
+}
 .avialableAndShort {
   display: flex;
   justify-content: space-between;
