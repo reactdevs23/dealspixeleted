@@ -118,7 +118,7 @@
     justify-content: center;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   .navbar {
     max-width: 1440px;
     width: 90%;
