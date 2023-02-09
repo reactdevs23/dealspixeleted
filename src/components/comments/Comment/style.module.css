@@ -86,6 +86,10 @@
   cursor: pointer;
   outline: none;
 }
+/* .activeLiked {
+  background: #219653;
+  border: 1px solid #219653;
+} */
 .actionText {
   font-family: "Inter";
   font-style: normal;
@@ -96,6 +100,9 @@
   letter-spacing: -0.005em;
   color: rgb(25, 25, 25, 0.5);
 }
+/* .activeLiked .actionText {
+  color: #fff;
+} */
 .likeBox {
   display: flex;
   align-items: center;

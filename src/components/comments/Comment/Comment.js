@@ -5,6 +5,7 @@ import { TimeFormation } from "../../../assets/data/comments";
 import { AiTwotoneLike } from "react-icons/ai";
 import { BiMessageDetail } from "react-icons/bi";
 import styles from "./style.module.css";
+import { useState } from "react";
 
 const Comment = ({
   comment,
@@ -17,6 +18,7 @@ const Comment = ({
   parentId = null,
   currentUserId,
 }) => {
+  const [liked, setLiked] = useState(false);
   const isReplying =
     activeComment &&
     activeComment.id === comment.id &&
@@ -67,8 +69,14 @@ const Comment = ({
         </div>
         {canReply && (
           <div className={styles.commentAction}>
-            <button className={styles.actionBox}>
-              <AiTwotoneLike className={styles.actionText} />
+            <button
+              className={`${styles.actionBox} `}
+              onClick={() => setLiked((prev) => !prev)}
+            >
+              <AiTwotoneLike
+                className={styles.actionText}
+                color={liked && "#219653"}
+              />
               <span className={styles.actionText}>Like</span>
             </button>
             <button
