@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiTwotoneLike, AiTwotoneDislike } from "react-icons/ai";
 import { dealhunder } from "../../../assets/images/images";
@@ -53,13 +53,13 @@ const ProductDescription = () => {
         </div>
       </div>
       <div className={styles.detailsShareDeals}>
-        <button
+        <div
           className={styles.seeDetails}
           onClick={scrollToBottom}
           id="scroll-to-bottom"
         >
           See Details
-        </button>
+        </div>
         <div className={styles.dealAndShare}>
           <div className={styles.deals}>
             <p className={styles.dealText}>Good deal?</p>
