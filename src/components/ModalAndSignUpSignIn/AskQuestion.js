@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
 import { TfiClose } from "react-icons/tfi";
 
 import Input from "../Input/Input";
 import styles from "./styles.module.css";
 import { useDataContext } from "../context";
 const AskQuestion = ({ setAskQuestion }) => {
-  const { setSubmitQuestion } = useDataContext();
+  const { setQuestion } = useDataContext();
   const [values, setValues] = useState({
     product: "",
     email: "",
@@ -30,7 +30,16 @@ const AskQuestion = ({ setAskQuestion }) => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-
+  const addingQuestion = () => {
+    setQuestion([
+      {
+        name: "Lima Islam   ",
+        date: "06 Aug 2021",
+        question: "is there any Lorem ipsum available?",
+        answer: "Yes sir, Lorem Ipsum-H2105D Lorem Ipsum is simply dummy text",
+      },
+    ]);
+  };
   return (
     <div className={styles.wrapper}>
       <TfiClose
@@ -63,7 +72,7 @@ const AskQuestion = ({ setAskQuestion }) => {
           className={styles.button}
           onClick={(e) => {
             e.preventDefault();
-            setSubmitQuestion(true);
+            addingQuestion();
 
             setAskQuestion(false);
           }}

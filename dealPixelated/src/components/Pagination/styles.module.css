@@ -1,0 +1,46 @@
+.myPagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+}
+.myPageNumber {
+  list-style: none;
+  border: 0.5px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: #ffffff;
+  min-width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.myPageNumber a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: #191919;
+}
+.activeMyPagenumber {
+  background: #e0001a;
+  border: 0.5px solid #e0001a;
+}
+.activeMyPagenumber a {
+  color: #fff;
+}
+@media only screen and (max-width: 400px) {
+  .myPagination {
+    gap: 4px;
+  }
+  .myPageNumber {
+    min-width: 35px;
+    padding: 6px 10px;
+  }
+  .myPageNumber a {
+    font-size: 12px;
+  }
+}

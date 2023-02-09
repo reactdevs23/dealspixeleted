@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { products } from "../../assets/data/product";
 import { dealscore, view } from "../../assets/images/images";
 import { MdOutlineMessage } from "react-icons/md";
@@ -19,12 +19,21 @@ export const ProductDetails = ({
   comments = "4",
 }) => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   return (
     <>
       <section className="container">
         <p className={styles.link}>
-          <AiFillHome className={styles.home} /> / Home /{" "}
-          {products[id - 1].title}
+          <Link to="/">
+            <AiFillHome className={styles.home} />
+          </Link>{" "}
+          /{" "}
+          <span onClick={() => navigate(-1)} className={styles.back}>
+            {" "}
+            Previous Link Here
+          </span>{" "}
+          / {products[id - 1].title}
         </p>
         <div className={styles.createAtContainer}>
           <p className={styles.text}>

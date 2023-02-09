@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -16,7 +16,7 @@ import SignUp from "./components/SignUpLogIn/SignUp";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <>
         <ScrollToTop />
         <Navbar />
         <Routes>
@@ -26,13 +26,9 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
         </Routes>
-        {/* <Navbar />
-      <Products />
-      <Footer /> */}
-        {/* <ProductDetails /> */}
-        {/* <PostDeal /> <Join />*/}
+
         <Footer />
-      </BrowserRouter>
+      </>
     </div>
   );
 }

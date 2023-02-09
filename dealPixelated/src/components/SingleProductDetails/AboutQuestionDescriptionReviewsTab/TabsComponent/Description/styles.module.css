@@ -1,0 +1,50 @@
+.projectDescription {
+  background: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 40px 35px;
+  margin-top: 50px;
+}
+.title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #191919;
+}
+.tagline {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 173%;
+  color: #191919;
+  padding: 15px 0;
+}
+.features {
+  padding-left: 20px;
+}
+.text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 186%;
+  color: rgb(25, 25, 25, 0.72);
+  padding: 3px 0;
+}
+.details {
+  padding: 0;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .projectDescription {
+    padding: 30px 18px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .projectDescription {
+    padding: 22px 18px;
+  }
+}

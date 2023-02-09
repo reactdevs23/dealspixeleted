@@ -134,7 +134,11 @@ const Products = () => {
             {sortDropDownOpen && (
               <div className={styles.sortingItem}>
                 {sorting.map((el, i) => (
-                  <p key={i} className={styles.item}>
+                  <p
+                    key={i}
+                    className={styles.item}
+                    onClick={() => setSortDropDownOpen(false)}
+                  >
                     {el}
                   </p>
                 ))}

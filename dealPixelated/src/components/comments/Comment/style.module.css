@@ -1,0 +1,162 @@
+.border {
+  border-bottom: 1px solid rgb(25, 25, 25, 0.1);
+}
+
+.commentImageContainer {
+  margin-right: 8px;
+}
+
+.commentImageContainer img {
+  border-radius: 50%;
+  width: 44px;
+}
+.replyUser img {
+  width: 32px;
+}
+.commentRightPart {
+  width: 100%;
+}
+
+.createdAndOtherText {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 2px 0;
+}
+.text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+
+  position: relative;
+  padding: 3px;
+}
+.text:not(:first-child)::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #191919;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+.text:not(:first-child) {
+  padding: 0 10px;
+}
+.text:first-child {
+  padding-right: 10px;
+}
+.commentAuthor {
+  margin-right: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 112%;
+  color: #191919;
+}
+
+.commentAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.replies {
+  margin-top: 20px;
+}
+.replyIcon {
+  margin-top: 1px;
+}
+.actionBox {
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  padding: 3px 4px;
+  display: flex;
+  align-items: center;
+
+  gap: 2px;
+  cursor: pointer;
+  outline: none;
+}
+.actionText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: rgb(25, 25, 25, 0.5);
+}
+.likeBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 15px;
+}
+.likeContainer {
+  background: #e0001a;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.like {
+  color: #fff;
+  font-size: 12px;
+}
+.likeNumber {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+  letter-spacing: -0.005em;
+
+  color: rgb(25, 25, 25, 0.5);
+}
+.commentText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 186%;
+  color: #191919;
+  padding: 5px 0 14px 0;
+}
+.myComment {
+  display: flex;
+
+  padding: 28px 0;
+}
+@media only screen and (max-width: 520px) {
+  .commentImageContainer img {
+    border-radius: 50%;
+    width: 32px;
+  }
+  .replyUser img {
+    width: 26px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .commentAuthor {
+    font-size: 14px;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .commentText {
+    font-size: 12px;
+  }
+}

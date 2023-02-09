@@ -80,15 +80,20 @@
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 125%;
+  line-height: 100%;
   color: #ffffff;
   background: #e0001a;
   border-radius: 2px;
-  padding: 6px 15px;
+
+  padding: 0px 15px;
   border: none;
   outline: none;
   cursor: pointer;
   text-align: center;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .dealAndShare {
   display: flex;

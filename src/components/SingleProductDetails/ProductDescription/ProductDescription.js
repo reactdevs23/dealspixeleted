@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiTwotoneLike, AiTwotoneDislike } from "react-icons/ai";
 import { dealhunder } from "../../../assets/images/images";
@@ -28,6 +28,7 @@ const ProductDescription = () => {
   const scrollToBottom = () => {
     bottom.current.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <div>
       <h3 className={styles.title}>
@@ -64,6 +65,7 @@ const ProductDescription = () => {
             <p className={styles.dealText}>Good deal?</p>
             {likedOrNot.map((el, i) => (
               <p
+                key={i}
                 onClick={() => setLike(i)}
                 className={`${styles.likeContainer} ${
                   i === 0 && like === i && styles.liked

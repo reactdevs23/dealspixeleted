@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDataContext } from "../../context";
 import styles from "./styles.module.css";
 import AboutOp from "./TabsComponent/AboutOp/AboutOp";
-import Comment from "./TabsComponent/Comment/Comment";
+import Comment from "./TabsComponent/LeaveComment/LeaveComment";
 import Desctiption from "./TabsComponent/Description/Description";
 import QuestionAndAnswer from "./TabsComponent/QuestionAndAnswer/QuestionAndAnswer";
 

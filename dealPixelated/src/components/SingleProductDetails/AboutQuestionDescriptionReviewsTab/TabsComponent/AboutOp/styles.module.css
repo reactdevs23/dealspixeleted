@@ -1,0 +1,155 @@
+.aboutOp {
+  background: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 40px 35px;
+  margin-top: 50px;
+}
+.title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #191919;
+}
+.detailsInformation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(25, 25, 25, 0.12);
+  padding-bottom: 20px;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 18px;
+}
+.iconAndinfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.icon {
+  color: rgb(25, 25, 25, 0.72);
+  margin-top: 2px;
+}
+.info {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: rgb(25, 25, 25, 0.72);
+}
+.dealHunter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 40px;
+}
+.profileImage {
+  width: 90px;
+}
+.headingAndthanksBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.heading {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 110%;
+  color: #191919;
+  position: relative;
+}
+.heading::after {
+  content: "Deal hunter";
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translate(100%, -50%);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 136%;
+  color: #00a3ff;
+  background: rgba(0, 163, 255, 0.12);
+
+  border-radius: 15px;
+  width: 70px;
+  padding: 3px 0;
+  text-align: center;
+}
+.joinDate {
+  padding: 10px 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 164%;
+  color: rgba(25, 25, 25, 0.72);
+}
+.thanksBox {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 172%;
+  color: #191919;
+  background: rgba(232, 232, 232, 0.5);
+  border-radius: 38px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+}
+.star {
+  color: #ff9900;
+}
+@media only screen and (max-width: 991px) {
+  .detailsInformation {
+    align-items: flex-start;
+  }
+  .details {
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .aboutOp {
+    padding: 30px 18px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .detailsInformation {
+    flex-direction: column;
+  }
+  .title {
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .aboutOp {
+    padding: 22px 18px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .details {
+    grid-template-columns: auto;
+  }
+  .dealHunter {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .heading::after {
+    top: -20px;
+    right: 25px;
+  }
+}

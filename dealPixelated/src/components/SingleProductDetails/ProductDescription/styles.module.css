@@ -1,0 +1,192 @@
+.title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 124%;
+  letter-spacing: -0.01em;
+  color: #191919;
+}
+.price {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 37.5px;
+  line-height: 100%;
+  letter-spacing: -0.005em;
+  color: #0a8be9;
+  padding: 15px 0;
+}
+.previousPrice {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+
+  letter-spacing: -0.005em;
+  text-decoration-line: line-through;
+  color: #191919;
+
+  opacity: 0.5;
+}
+.details {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 164%;
+  letter-spacing: -0.005em;
+  color: rgba(25, 25, 25, 0.72);
+  padding: 12px 0;
+}
+.from {
+  color: #e0001a;
+}
+.shipping {
+  color: #219653;
+}
+.keyFeatureTitle {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 128%;
+  letter-spacing: -0.005em;
+  color: #191919;
+  padding: 20px 0;
+}
+.keyFeatures {
+  padding-left: 12px;
+}
+.keyFeature {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 177%;
+  color: rgba(25, 25, 25, 0.72);
+}
+.detailsShareDeals {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 15px;
+  padding: 30px 0;
+}
+
+.seeDetails {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 125%;
+  color: #ffffff;
+  background: #e0001a;
+  border-radius: 2px;
+  padding: 6px 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+}
+.dealAndShare {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.deals {
+  display: flex;
+  align-items: center;
+}
+.dealText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+
+  color: rgb(25, 25, 25, 0.72);
+}
+.likeContainer {
+  background: #e8e8e8;
+  border-radius: 2px;
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.like {
+  font-size: 18px;
+  color: rgba(25, 25, 25, 0.4);
+  cursor: pointer;
+}
+.liked .like {
+  color: #219653;
+}
+.disLiked .like {
+  color: #e0001a;
+}
+.share {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.shareText {
+  margin-left: 8px;
+}
+.dealHunter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.profileImage {
+  width: 39px;
+  padding: 2px;
+  display: block;
+  border: 2px solid #e8e8e8;
+  border-radius: 50%;
+}
+.headingAndthanksBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.heading {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 110%;
+  color: #191919;
+  padding-bottom: 8px;
+}
+
+.thanksBox {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 172%;
+  color: #191919;
+  background: rgba(232, 232, 232, 0.5);
+  border-radius: 38px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+}
+.star {
+  color: #ff9900;
+}
+@media only screen and (max-width: 991px) {
+  .detailsShareDeals {
+    grid-template-columns: 1fr;
+  }
+  .dealAndShare {
+    justify-content: space-between;
+  }
+}

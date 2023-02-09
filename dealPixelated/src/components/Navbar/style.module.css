@@ -1,0 +1,160 @@
+.navbarContainer {
+  background: var(--black);
+  padding: 8px 0;
+}
+.navbar {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logoAndSearch {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.searchContainer {
+  width: 421px;
+  padding: 8px 15px;
+  background: #ffffff;
+  border-radius: 38px;
+  display: flex;
+  align-items: center;
+}
+.search {
+  padding: 6px 15px;
+  border: none;
+  outline: none;
+  width: 100%;
+  display: block;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: var(--black);
+}
+.notificationAndUser {
+  display: flex;
+  justify-content: flex-end;
+  gap: 35px;
+}
+.iconAndItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.icon {
+  cursor: pointer;
+}
+.item {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  letter-spacing: -0.005em;
+  color: #ffffff;
+}
+.button {
+  background: var(--red);
+  border-radius: 22px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #ffffff;
+  padding: 12px 18px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1199px) {
+  .logo {
+    width: 120px;
+  }
+  .searchContainer {
+    width: 350px;
+  }
+  .notificationAndUser {
+    gap: 24px;
+  }
+  .iconAndItem {
+    gap: 8px;
+  }
+  .item {
+    font-size: 16px;
+  }
+  .icon {
+    width: 22px;
+  }
+  .button {
+    font-size: 18px;
+    padding: 8px 14px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    padding: 8px 0;
+  }
+  .logo {
+    margin-right: 15px;
+  }
+  .logoAndSearch {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .notificationAndUser {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .item {
+    font-size: 16px;
+  }
+  .icon {
+    width: 18px;
+  }
+  .button {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .navbar {
+    max-width: 1440px;
+    width: 90%;
+  }
+  .searchContainer {
+    width: 280px;
+  }
+  .logoAndSearch {
+    gap: 16px;
+  }
+  .notificationAndUser {
+    gap: 15px;
+  }
+  .iconAndItem {
+    gap: 6px;
+  }
+  .item {
+    font-size: 14px;
+  }
+  .icon {
+    width: 15px;
+  }
+  .button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}

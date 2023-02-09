@@ -1,0 +1,42 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 7px 0;
+  width: 100%;
+}
+.label {
+  display: block;
+  padding-bottom: 5px;
+  cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #191919;
+  padding-bottom: 7px;
+  position: relative;
+}
+.label::after {
+  content: "*";
+  position: absolute;
+  color: #e0001a;
+  right: -8px;
+  top: -3px;
+}
+
+.input {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 14px 12px;
+  width: 100%;
+  outline: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #191919;
+}

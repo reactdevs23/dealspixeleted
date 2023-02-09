@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { TfiClose } from "react-icons/tfi";
-import { Link } from "react-router-dom";
+
 import { useDataContext } from "../context";
+import { user1, user2, user3, user4 } from "../../assets/images/images";
 import Input from "../Input/Input";
 import styles from "./styles.module.css";
 const WriteReview = ({ setWriteReview }) => {
-  const { setSubmitComment } = useDataContext();
+  const { setComments } = useDataContext();
   const [values, setValues] = useState({
     email: "",
 
@@ -22,6 +23,60 @@ const WriteReview = ({ setWriteReview }) => {
   ];
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
+  };
+  const addingComments = () => {
+    setComments([
+      {
+        id: "1",
+        user: user1,
+        body: "If we consider the price then Lorem Ipsum is simply dummy text of the printing Overall nice! Thanks",
+        username: "Esther Howard",
+        userId: "1",
+        parentId: null,
+        createdAt: "2021-08-16T23:00:33.010+02:00",
+        joinAt: "Nov 2018",
+        like: 22,
+        position: " Apprentice ",
+        posts: 384,
+        reputation: 50,
+      },
+      {
+        id: "2",
+        user: user4,
+        body: "If we consider the price then Lorem Ipsum is simply dummy text of the printing Overall nice! Thanks",
+        username: "Marvin McKinney",
+        userId: "2",
+        parentId: null,
+        createdAt: "2021-08-16T23:00:33.010+02:00",
+        joinAt: "Jan 2018",
+        like: 22,
+        position: " Apprentice ",
+        posts: 384,
+        reputation: 60,
+      },
+      {
+        id: "3",
+        user: user2,
+        body: "If we consider the price then Lorem Ipsum is simply dummy text of the printing Overall nice! Thanks",
+        username: "Robert Fox",
+        userId: "2",
+        parentId: "1",
+        createdAt: "2021-08-16T23:00:33.010+02:00",
+        joinAt: "Feb 2023",
+        like: 22,
+      },
+      {
+        id: "4",
+        user: user3,
+        body: "If we consider the price then Lorem Ipsum is simply dummy text of the printing Overall nice! Thanks",
+        username: "Cameron Williamson",
+        userId: "2",
+        parentId: "1",
+        createdAt: "2021-08-16T23:00:33.010+02:00",
+        joinAt: "Jan 2018",
+        like: 22,
+      },
+    ]);
   };
 
   return (
@@ -48,7 +103,7 @@ const WriteReview = ({ setWriteReview }) => {
                 key={i}
                 onClick={() => setRating(i + 1)}
               >
-                <span className={i + 1 === rating && styles.circle}></span>
+                <span className={i + 1 === rating ? styles.circle : ""}></span>
               </div>
             ))}
             <span className={`${styles.label} ${styles.ratingText}`}>Good</span>
@@ -67,15 +122,18 @@ const WriteReview = ({ setWriteReview }) => {
           className={styles.button}
           onClick={(e) => {
             e.preventDefault();
-            setSubmitComment(true);
+            addingComments();
             setWriteReview(false);
           }}
         >
           Submit
         </button>
-        <Link to="/profile" className={`${styles.button} ${styles.backButton}`}>
+        <div
+          className={`${styles.button} ${styles.backButton}`}
+          onClick={() => setWriteReview(false)}
+        >
           Back
-        </Link>
+        </div>
       </form>
     </div>
   );

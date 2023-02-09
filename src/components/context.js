@@ -4,25 +4,16 @@ const StateData = createContext();
 export const ContextProvider = ({ children }) => {
   const bottom = useRef();
   const filteringText = [];
-  const question = [
-    {
-      name: "Lima Islam   ",
-      date: "06 Aug 2021",
-      question: "is there any Lorem ipsum available?",
-      answer: "Yes sir, Lorem Ipsum-H2105D Lorem Ipsum is simply dummy text",
-    },
-  ];
-  const [submitQuestion, setSubmitQuestion] = useState(false);
-  const [submitComment, setSubmitComment] = useState(false);
+  const [question, setQuestion] = useState([]);
+  const [comments, setComments] = useState([]);
 
   return (
     <StateData.Provider
       value={{
         question,
-        submitQuestion,
-        setSubmitQuestion,
-        submitComment,
-        setSubmitComment,
+        setQuestion,
+        comments,
+        setComments,
         filteringText,
         bottom,
       }}

@@ -7,13 +7,14 @@ import styles from "./styles.module.css";
 
 const QuestionAndAnswer = () => {
   const [askQuestion, setAskQuestion] = useState(false);
-  const { question, submitQuestion } = useDataContext();
+  const { question } = useDataContext();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.questionAndAnswer}>
         <div className={styles.header}>
           <div>
-            <h5 className={styles.heading}>Questions (0)</h5>
+            <h5 className={styles.heading}>Questions ({question.length})</h5>
             <p className={styles.text}>
               Have question about this product? Get specific details about this
               product from expert.
@@ -29,38 +30,19 @@ const QuestionAndAnswer = () => {
             </button>
           </div>
         </div>
-        <div className={styles.messageBox}>
-          <div className={styles.iconContainer}>
-            <RiMessage2Fill className={styles.icon} />
-          </div>
-          <p className={`${styles.text} ${styles.text2}`}>
-            There are no questions asked yet. Be the first one to ask a
-            question.
-          </p>
-        </div>
-      </div>
-      {submitQuestion && (
-        <div className={styles.questionAndAnswer}>
-          <div className={styles.header}>
-            <div>
-              <h5 className={styles.heading}>Questions (1)</h5>
-              <p className={styles.text}>
-                Have question about this product? Get specific details about
-                this product from expert.
-              </p>
+        {question.length === 0 && (
+          <div className={styles.messageBox}>
+            <div className={styles.iconContainer}>
+              <RiMessage2Fill className={styles.icon} />
             </div>
-            <div className={styles.buttonContainer}>
-              {" "}
-              <button
-                className={styles.button}
-                onClick={() => setAskQuestion((prev) => !prev)}
-              >
-                Ask Question
-              </button>
-            </div>
+            <p className={`${styles.text} ${styles.text2}`}>
+              There are no questions asked yet. Be the first one to ask a
+              question.
+            </p>
           </div>
-
-          {question.map((el, i) => (
+        )}
+        {question.length !== 0 &&
+          question.map((el, i) => (
             <div className={styles.answerBox} key={i}>
               <p className={styles.dateAndName}>
                 {" "}
@@ -76,8 +58,8 @@ const QuestionAndAnswer = () => {
               </p>
             </div>
           ))}
-        </div>
-      )}
+      </div>
+
       {askQuestion && (
         <Modal setModal={setAskQuestion}>
           <AskQuestion setAskQuestion={setAskQuestion} />
